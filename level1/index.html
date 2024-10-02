@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main container of the music player -->
+    <div class="music-player">
+        
+        <!-- Left section for the track list -->
+        <section class="left-section">
+            <!-- WSA logo container -->
+            <div class="wsa-logo-container">
+                <img src="./logo/wsa-logo.svg" alt="WSA logo">
+            </div>
+
+            <!-- Song list container -->
+            <div class="song-list-container">
+                <h2>Track List</h2>
+                <div id="song-list">
+                    <!-- Song item list -->
+                    <div class="item-list-container">
+                        <!-- Icon -->
+                        <div class="item-img">
+                            <img src="/icons/outline.svg" alt="icon">
+                        </div>
+
+                        <!-- Track data: song title and artist -->
+                        <div class="item-track-data">
+                            <p></p>
+                            <p></p>
+                        </div>
+
+                        <!-- Song duration and year -->
+                        <div class="item-track-duration">
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Right section for player controls -->
+        <section class="player-container">
+            <!-- Thumbnail container -->
+            <div class="thumbnail-container">
+                <img src="" alt="thumbnail" id="thumbnail">
+            </div>
+
+            <!-- Track details -->
+            <div class="track-details">
+                <!-- Song title and description -->
+                <p id="player-title"></p>
+                <p id="player-description"></p>
+            </div>
+            <!-- Controls -->
+            <div class="controls">
+                <!-- Track progress -->
+                <div class="track-progress">
+                    <input type="range" id="progress" min="0" max="100" value="0" step="1">
+                    <div class="time" id="current-time">00:00</div>
+                    <div class="time" id="time-left">00:00</div>
+                </div>
+                <!-- 3 button controls group -->
+                <div class="btn-group">
+                    <button class="control-button" id="restart"><img src="icons/arrow-repeat.svg"></button>
+                    <button id="play-pause"><img src="icons/play-button.svg"></button>
+                    <button class="control-button" id="stop"><img src="icons/stop.svg"></button>
+                </div>
+                <!-- Volume container -->
+                <div class="volume-container">
+                    <img src="icons/volume-low.svg">
+                    <input type="range" id="volume" min="0" max="1" step="0.1" value="1" class="volume-range">
+                    <!-- 0 is mute and 1 is volume max -->
+                    <img src="icons/volume-high.svg">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
